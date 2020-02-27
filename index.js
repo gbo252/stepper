@@ -20,9 +20,11 @@ const stepForward = e => {
 		steps[counter].classList.add("text-danger");
 		ticks[counter].classList.add("d-none");
 	} else {
-        questions[counter].classList.add("d-none");
+		questions[counter].classList.add("d-none");
 		questions[counter].querySelector("small").classList.add("d-none");
-		questions[counter].querySelector("label").classList.remove("text-danger");
+		questions[counter]
+			.querySelector("label")
+			.classList.remove("text-danger");
 		steps[counter].classList.remove("text-danger");
 		ticks[counter].classList.remove("d-none");
 		counter++;
@@ -43,9 +45,7 @@ const stepBackward = e => {
 	counter--;
 	questions[counter].classList.remove("d-none");
 
-	if (counter !== questions.length - 1) {
-		ticks[questions.length - 1].classList.add("d-none");
-	}
+	ticks[questions.length - 1].classList.add("d-none");
 };
 
 document.querySelectorAll(".continue").forEach(continueButton => {

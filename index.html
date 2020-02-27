@@ -3,25 +3,128 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://kit.fontawesome.com/c45e20d8df.js"
+			crossorigin="anonymous"
+		></script>
 		<title>Stepper Form</title>
 	</head>
 	<body>
-		<form>
-			<input
-				placeholder="email"
-				type="email"
-				name="email"
-			/>
-			<input
-				class="hidden"
-				placeholder="password"
-				type="password"
-				name="password"
-			/>
-			<button id="next-button">Next</button>
-			<button>Submit</button>
-		</form>
+		<div class="container">
+			<div
+				class="row form position-absolute text-center d-flex justify-content-center align-items-center"
+				style="top: 0; bottom: 0; left: 0; right: 0"
+			>
+				<div class="col-10 col-sm-8 col-md-6 col-lg-5 col-xl-4 bg-light rounded-lg border shadow px-5 py-4">
+					<form>
+                        <h1 class="h2 mb-4 font-weight-light">Sign Up Form</h1>
+                        <hr />
+
+						<div class="row">
+							<h2 class="h4 step">Step 1</h2>
+							<i
+								class="text-success fas fa-check-circle ml-2 d-none"
+							></i>
+						</div>
+
+						<div class="question my-2">
+							<div class="form-group row">
+								<label for="email" class="col-3 col-form-label"
+									>Email</label
+								>
+								<div class="col-9">
+                                    <input
+                                        name="email"
+										type="email"
+										class="form-control"
+										id="email"
+									/>
+									<small class="d-none text-danger"
+										>Please enter a valid email</small
+									>
+								</div>
+							</div>
+							<button class="continue btn btn-primary mx-1">
+								Continue
+                            </button>
+                            <hr />
+						</div>
+
+						<div class="row">
+							<h2 class="h4 step font-weight-light">Step 2</h2>
+							<i
+								class="text-success fas fa-check-circle ml-2 d-none"
+							></i>
+						</div>
+
+						<div class="question my-2 d-none">
+							<div class="form-group row">
+								<label
+									for="password"
+									class="col-3 col-form-label"
+									>Password</label
+								>
+								<div class="col-9">
+                                    <input
+                                        name="password"
+										type="password"
+										class="form-control"
+										id="password"
+									/>
+									<small class="d-none text-danger"
+										>Please enter a password minimum 6
+										characters</small
+									>
+								</div>
+							</div>
+							<button class="continue btn btn-primary mx-1">
+								Continue
+							</button>
+							<button
+								class="row back btn btn-outline-secondary mx-1"
+							>
+								Back
+                            </button>
+                            <hr />
+						</div>
+
+						<div class="row">
+							<h2 class="h4 step font-weight-light">Step 3</h2>
+							<i
+								class="text-success fas fa-check-circle ml-2 d-none"
+							></i>
+						</div>
+
+						<div class="question my-2 d-none">
+							<div class="row mb-3">
+								<div class="col-3"></div>
+								<div class="col-9 text-left">
+									Click the Submit button to finish!
+								</div>
+							</div>
+							<a
+								href="./thanks.html"
+								role="button"
+								class="btn btn-success mx-1"
+							>
+								Submit
+							</a>
+							<button
+								class="row back btn btn-outline-secondary mx-1"
+							>
+								Back
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 		<script src="index.js"></script>
 	</body>
 </html>
